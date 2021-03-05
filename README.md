@@ -302,4 +302,4 @@ For example: JSON code
 
 ## License
 
-[CC0 1.0 (Public Domain)](LICENSE.md)
+Published under the [MIT Licence](LICENSE.md)
