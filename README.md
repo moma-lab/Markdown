@@ -68,11 +68,12 @@
 ***markdown***
 
 ```markdown
-# Headline            (level 1)
-## Sub headline       (level 2)
-### Sub headline      (level 3)
-...                      ...
-###### Sub headline   (level 6)
+# Headline level 1
+## Sub headline (level 2)
+### Sub headline (level 3)
+#### Sub headline (level 4)
+##### Sub headline (level 5)
+###### Sub headline (level 6)
 ```
 
 ***result***
@@ -154,6 +155,8 @@ _________________
 
 ## Links
 
+***markdown***
+
 ```markdown
 [Link text](http://some.url.com "Link title")
 
@@ -161,6 +164,8 @@ _________________
 
 [Link text<a name="#link-id">](#link-id "Link title")
 ```
+
+***result***
 
 + [Some test link](http://some.url.com "Link title")
 + [Inner text link](#MAIO-plugin "Inner text link to MAIO plugin")
@@ -248,7 +253,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 
 ## Tables
 
-**markdown**
+***markdown***
 
 ```markdown
 | left | center | right |
@@ -261,7 +266,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 * If you have the [Markdown All in One](#MAIO-plugin) plugin installed you can format a table like so:
   * First mark the table, then press 'Shift + Command + F' to format the table
 
-**result**
+***result***
 
 | left | center | right |
 | :--- | :----: | ----: |
@@ -279,7 +284,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 > 
 > To start an **unordered list** simply start a new line using one of the following three indicating characters: asterisk ( \* ), minus ( \- ) or plus ( \+ ) character. Those indicators can be mixed.
 
-**markdown**
+***markdown***
 
 ```markdown
 * an asterisk ( \* ) starts an unordered list
@@ -287,7 +292,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 - the minus character ( \- ) can also be used for an unordered list
 ```
 
-**result**
+***result***
 
 * an asterisk ( \* ) starts an unordered list
 
@@ -299,7 +304,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 
 > Unordered lists can be nested. The indicating characters can also be mixed when nested.
 
-**markdown**
+***markdown***
 
 ```markdown
 * Level 1, Item 1 using an asterisk ( \* )
@@ -313,7 +318,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 - Level 1, Item 3 using the ( \- ) character
 ```
 
-**result**
+***result***
 
 * Level 1, Item 1 using an asterisk ( \* )
 
@@ -337,7 +342,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 
 > To start an ordered list, write this:
 
-**markdown**
+***markdown***
 
 ```markdown
 1. this starts a list *with* numbers
@@ -349,7 +354,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
     * here i'm back to the second level
 ```
 
-**result**
+***result***
 
 1. this starts a list *with* numbers
 +  this will show as number "2"
@@ -363,7 +368,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 
 > To start a check list, write this:
 
-**markdown**
+***markdown***
 
 ```markdown
 - [ ] this is not checked
@@ -371,7 +376,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 - [x] but THIS is checked
 ```
 
-**result**
+***result***
 
 - [ ] this is not checked
 - [ ] this is not checked too
@@ -381,7 +386,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 
 #### Manually counted list items
 
-**markdown**
+***markdown***
 
 ```markdown
 1. Level 1, Item 1
@@ -389,7 +394,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 3. Level 1, Item 3
 ```
 
-**result**
+***result***
 
 1. Level 1, Item 1
 2. Level 1, Item 2
@@ -399,7 +404,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 
 > Start every new list item on a new line with indicator symbol "1." to auto increment the numbering.
 
-**markdown**
+***markdown***
 
 ```markdown
 1. Level 1, Item 1
@@ -407,7 +412,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 1. Level 1, Item 3
 ```
 
-**result**
+***result***
 
 1. Level 1, Item 1
 1. Level 1, Item 2
@@ -417,7 +422,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 
 > Nested list with auto counted list items.
 
-**markdown**
+***markdown***
 
 ```markdown
 1.  Level 1, Item 1
@@ -447,7 +452,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 1.  Level 1, Item 3
 ```
 
-**result**
+***result***
 
 1.  Level 1, Item 1
 
@@ -477,7 +482,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 
 ### Bullet list
 
-**markdown**
+***markdown***
 
 ```markdown
 - paragraph:
@@ -490,7 +495,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
     without linebreak
 ```
 
-**result**
+***result***
 
 - paragraph:
 
@@ -507,7 +512,7 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 
 ### Definition lists
 
-**markdown**
+***markdown***
 
 ```markdown
 First Term
@@ -518,7 +523,7 @@ Second Term
 : This is another definition of the second term.
 ```
 
-**result**
+***result***
 
 First Term
 : This is the definition of the first term.
@@ -529,21 +534,21 @@ Second Term
 
 ## Blockquotes
 
-To create a blockquote, add a ">" (greater than character) in front of a paragraph.
+> To create a blockquote, add a " \> " (greater than) in front of a paragraph.
 
-**markdown**
+***markdown***
 
 ```markdown
 > Dorothy followed her through many of the beautiful rooms in her castle.
 ```
 
-**result**
+***result***
 
 > Dorothy followed her through many of the beautiful rooms in her castle.
 
 ### Blockquotes with multiple paragraphs
 
-**markdown**
+***markdown***
 
 ```markdown
 > Dorothy followed her through many of the beautiful rooms in her castle.
@@ -551,7 +556,7 @@ To create a blockquote, add a ">" (greater than character) in front of a paragra
 > The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
 ```
 
-**result**
+***result***
 
 > Dorothy followed her through many of the beautiful rooms in her castle.
 >
@@ -559,13 +564,17 @@ To create a blockquote, add a ">" (greater than character) in front of a paragra
 
 ### Nested blockquotes
 
-Blockquotes can be nested. Add a >> in front of the paragraph you want to nest.
+> Blockquotes can be nested. Add a >> in front of the paragraph you want to nest.
+
+***markdown***
 
 ```markdown
 > Dorothy followed her through many of the beautiful rooms in her castle.
 >
 >> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
 ```
+
+***result***
 
 > Dorothy followed her through many of the beautiful rooms in her castle.
 >
@@ -575,21 +584,25 @@ Blockquotes can be nested. Add a >> in front of the paragraph you want to nest.
 
 ### Single lines of code
 
+***markdown***
+
 ```markdown
 `a single line of code`
 ```
 
-`single line code block`
+***result***
+
+`a single line of code`
 
 ### Code blocks
 
-To create code blocks, there are several ways.
+> To create code blocks, there are several ways.
 
 #### Line indention
 
-Indent every line of the block by at least four spaces or one tab.
+> Indent every line of the block by at least four spaces or one tab.
 
-**Markup**
+***markup***
 
 ~~~markdown
 ....{
@@ -599,7 +612,7 @@ Indent every line of the block by at least four spaces or one tab.
 ....}
 ~~~
 
-**Output**
+***result***
 
     {
       "firstName": "John",
@@ -609,13 +622,13 @@ Indent every line of the block by at least four spaces or one tab.
 
 #### Backticks or tildes
 
-To form code blocks in Markdown, the code can be enclosed between certain special characters. This is why these code blocks are called "fenced code blocks".
+> To form code blocks in Markdown, the code can be enclosed between certain special characters. This is why these code blocks are called "fenced code blocks".
 
 ##### Enclosing with backticks
 
-To enclose the code you want to display use ***three backticks*** (```) followed by a ***linebreak*** at the beginning *and* the end of your code.
+> To enclose the code you want to display use ***three backticks*** (```) followed by a ***linebreak*** at the beginning *and* the end of your code.
 
-**Markdown**
+***markdown***
 
 ~~~markdown
 ```
@@ -627,7 +640,7 @@ To enclose the code you want to display use ***three backticks*** (```) followed
 ```
 ~~~
 
-**Output**
+***result***
 
 ```markdown
 {
@@ -641,7 +654,7 @@ To enclose the code you want to display use ***three backticks*** (```) followed
 
 To enclose the code you want to display use ***three tilde characters*** (~~~) followed by a ***linebreak*** at the beginning *and* the end of your code.
 
-**Markdown**
+***markdown***
 
 ```markdown
 ~~~
@@ -653,7 +666,7 @@ To enclose the code you want to display use ***three tilde characters*** (~~~) f
 ~~~
 ```
 
-**Output**
+***result***
 
 ~~~markdown
 {
@@ -667,10 +680,13 @@ To enclose the code you want to display use ***three tilde characters*** (~~~) f
 
 Many markdown processors support syntax highlighting for fenced code blocks. This feature allows you to add color highlighting for whatever language your code was written in. To add syntax highlighting, specify a language next to the backticks or tildes before the fenced code block.
 
-+ [Samples](https://sourceforge.net/p/tabulator/wiki/markdown_syntax/#md_ex_code "External link")
-+ [Link](https://www.markdownguide.org/extended-syntax/#syntax-highlighting)
+- [Samples](https://sourceforge.net/p/tabulator/wiki/markdown_syntax/#md_ex_code "External link")
+
+- [Link](https://www.markdownguide.org/extended-syntax/#syntax-highlighting)
 
 JSON code
+
+***markdown***
 
 ~~~markdown
 ```json
@@ -682,7 +698,7 @@ JSON code
 ```
 ~~~
 
-**Output**
+***result***
 
 ```json
 {
@@ -694,6 +710,8 @@ JSON code
 
 HTML code
 
+***markdown***
+
 ~~~markdown
 ```html
 <ul>
@@ -704,7 +722,7 @@ HTML code
 ```
 ~~~
 
-**Output**
+***result***
 
 ```html
 <ul>
@@ -716,6 +734,8 @@ HTML code
 
 JavaScript code
 
+***markdown***
+
 ~~~markdown
 ```js
 const Complex = require('Complex');
@@ -723,7 +743,7 @@ console.log(new Complex(3, 4).abs()); // 5
 ```
 ~~~
 
-**Output**
+***result***
 
 ```js
 const Complex = require('Complex');
@@ -732,6 +752,8 @@ console.log(new Complex(3, 4).abs()); // 5
 
 Python code
 
+***markdown***
+
 ~~~markdown
 ```py
 #!/usr/bin/python
@@ -739,7 +761,7 @@ import abc
 ```
 ~~~
 
-**Output**
+***result***
 
 ```py
 #!/usr/bin/bash
@@ -747,6 +769,8 @@ import abc
 ```
 
 Script code with leading shebang (here: bash script)
+
+***markdown***
 
 ~~~markdown
 ```bash
@@ -757,7 +781,7 @@ Script code with leading shebang (here: bash script)
 ```
 ~~~
 
-**Output**
+***result***
 
 ```bash
 #!/usr/bin/bash
