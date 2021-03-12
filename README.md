@@ -352,9 +352,9 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 **result**
 
 1. this starts a list *with* numbers
-2.  this will show as number "2"
-3.  this will show as number "3."
-4. any number, +, -, or * will keep the list going.
++  this will show as number "2"
+*  this will show as number "3."
+9. any number, +, -, or * will keep the list going.
     * just indent by 4 spaces (or tab) to make a sub-list
         1. just keep indenting for more sub lists
     * here i'm back to the second level
