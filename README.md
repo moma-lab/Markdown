@@ -28,14 +28,17 @@
     - [Unordered lists](#unordered-lists)
     - [Ordered lists](#ordered-lists)
     - [Checklists](#checklists)
-    - [Numbered Lists (auto count)](#numbered-lists-auto-count)
-  - [Example: Terminating a Callout Using Two Empty Lines (auto count)](#example-terminating-a-callout-using-two-empty-lines-auto-count)
-  - [List termination](#list-termination)
-    - [List A](#list-a)
-    - [List B](#list-b)
-  - [Nested list](#nested-list)
-  - [Bullet list](#bullet-list)
-  - [Definition lists](#definition-lists)
+    - [Numbered Lists](#numbered-lists)
+      - [Manual counting](#manual-counting)
+      - [Auto counting](#auto-counting)
+        - [Example: Terminating a Callout Using Two Empty Lines (auto count)](#example-terminating-a-callout-using-two-empty-lines-auto-count)
+        - [List termination](#list-termination)
+          - [List A](#list-a)
+          - [List B](#list-b)
+    - [Nested list](#nested-list)
+    - [Bullet list](#bullet-list)
+    - [Resources list](#resources-list)
+    - [Definition lists](#definition-lists)
   - [Blockquotes](#blockquotes)
     - [Blockquotes with multiple paragraphs](#blockquotes-with-multiple-paragraphs)
     - [Nested blockquotes](#nested-blockquotes)
@@ -248,7 +251,9 @@ To start a check list, write this:
 - [ ] this is not checked too
 - [x] but THIS is checked
 
-### Numbered Lists (auto count)
+### Numbered Lists
+
+#### Manual counting
 
 **markdown**
 
@@ -264,7 +269,23 @@ To start a check list, write this:
 2. two
 3. three
 
-## Example: Terminating a Callout Using Two Empty Lines (auto count)
+#### Auto counting
+
+**markdown**
+
+```markdown
+1. one
+1. two
+1. three
+```
+
+**result**
+
+1. one
+1. two
+1. three
+
+##### Example: Terminating a Callout Using Two Empty Lines (auto count)
 
 1.  First list, item 1
 1.  First list, item 2
@@ -272,18 +293,18 @@ To start a check list, write this:
 
 1.  Second list, item 1
 
-## List termination
+##### List termination
 
-### List A
+###### List A
 
 1.  Item 1, List A
 1.  Item 2, List A
 
-### List B
+###### List B
 
 1.  Item 1, List B
 
-## Nested list
+### Nested list
 
 1.  Level 1, Item 1
 
@@ -297,7 +318,7 @@ To start a check list, write this:
 
 1.  Level 1, Item 2
 
-## Bullet list
+### Bullet list
 
 - paragraph:
 
@@ -308,12 +329,9 @@ To start a check list, write this:
   - and here:
     without linebreak
 
-- ## Resources list
+### Resources list
 
-  - one
-  - two
-
-## Definition lists
+### Definition lists
 
 First Term
 : This is the definition of the first term.
@@ -359,18 +377,36 @@ Blockquotes can be nested. Add a >> in front of the paragraph you want to nest.
 >> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
 
 ## Backslash escapes for special characters
+
 \\   backslash
+
 \`   backtick (escape backtick character in [code](#escape-backtick-code "Link: how to escape backtick in markdown code block"))
+
 \*   asterisk
+
 \_   underscore
+
 \{\}  curly braces
+
 \[\]  square brackets
+
 \(\)  parentheses
+
 \#   hash mark
+
 \+   plus sign
+
 \-   minus sign (hyphen)
+
 \.   dot
+
 \!   exclamation mark
+
+| character | code  | description                                                                                                                 |
+| :-------: | :---: | :-------------------------------------------------------------------------------------------------------------------------- |
+|    \\     | `\\`  | backslash                                                                                                                   |
+|    \`     |       | backtick (escape backtick character in [code](#escape-backtick-code "Link: how to escape backtick in markdown code block")) |
+|     7     |   8   | 9                                                                                                                           |
 
 ## CODE
 
