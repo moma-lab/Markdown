@@ -5,13 +5,20 @@
 ## Table of Contents
 
 <details>
-  <!-- <summary><h1 style="display:inline;">Table of Contents</h1></summary> -->
   <summary>Click to show TOC</summary>
+
   <p>
 
 - [Basic Markdown Syntax](#basic-markdown-syntax)
   - [Table of Contents](#table-of-contents)
   - [Headlines](#headlines)
+<!-- [Headline level 1](#headline-level-1)
+  - [Sub headline (level 2)](#sub-headline-level-2)
+    - [Sub headline (level 3)](#sub-headline-level-3)
+      - [Sub headline (level 4)](#sub-headline-level-4)
+        - [Sub headline (level 5)](#sub-headline-level-5)
+          - [Sub headline (level 6)](#sub-headline-level-6)-->
+  - [Paragraphs](#paragraphs)
   - [Emphasizing text](#emphasizing-text)
   - [Horizontal Rules](#horizontal-rules)
   - [Links](#links)
@@ -22,20 +29,19 @@
     - [Loading images from remote URL](#loading-images-from-remote-url)
     - [Images as Link](#images-as-link)
   - [Table of contents (TOC)](#table-of-contents-toc)
-    - [Markdown plugins for Visual Studio Code](#markdown-plugins-for-visual-studio-code)
+    - [Create TOC manually](#create-toc-manually)
+    - [Using VS Code plugin Markdown All in One](#using-vs-code-plugin-markdown-all-in-one)
+  - [Markdown plugins for Visual Studio Code](#markdown-plugins-for-visual-studio-code)
   - [Tables](#tables)
   - [Lists](#lists)
-    - [Unordered lists](#unordered-lists)
+    - [Unordered lists<a name="unordered-lists">](#unordered-listsa-nameunordered-lists)
+    - [Nested unordered lists](#nested-unordered-lists)
     - [Ordered lists](#ordered-lists)
     - [Checklists](#checklists)
     - [Numbered Lists](#numbered-lists)
-      - [Manual counting](#manual-counting)
-      - [Auto counting](#auto-counting)
-        - [Example: Terminating a Callout Using Two Empty Lines (auto count)](#example-terminating-a-callout-using-two-empty-lines-auto-count)
-        - [List termination](#list-termination)
-          - [List A](#list-a)
-          - [List B](#list-b)
-    - [Nested list](#nested-list)
+      - [Manually counted list items](#manually-counted-list-items)
+      - [Auto counted list items](#auto-counted-list-items)
+      - [Nested numbered list (auto count)](#nested-numbered-list-auto-count)
     - [Bullet list](#bullet-list)
     - [Resources list](#resources-list)
     - [Definition lists](#definition-lists)
@@ -59,6 +65,8 @@
 
 ## Headlines
 
+***markdown***
+
 ```markdown
 # Headline            (level 1)
 ## Sub headline       (level 2)
@@ -67,9 +75,32 @@
 ###### Sub headline   (level 6)
 ```
 
-<!--
-![image of headline types](./images/headline-types.png "Image title")
--->
+***result***
+
+# Headline level 1
+## Sub headline (level 2)
+### Sub headline (level 3)
+#### Sub headline (level 4)
+##### Sub headline (level 5)
+###### Sub headline (level 6)
+
+## Paragraphs
+
+> To create paragraphs, use a blank line to separate one or more lines of text. Unless the paragraph is in a [list](#lists), don’t indent paragraphs with spaces or tabs.
+
+***markdown***
+
+```markdown
+I really like using Markdown.
+
+I think I'll use it to format all of my documents from now on.
+```
+
+***result***
+
+I really like using Markdown.
+
+I think I'll use it to format all of my documents from now on.
 
 ## Emphasizing text
 
@@ -80,13 +111,34 @@ To emphasize text use:
 + ***bold and italic***: use `***bold and italic***` OR `___bold and italic___`
 + to *nest one **inside** the other*: use `*nest one **inside** the other*` OR `_nest one __inside__ the other_`
 + ~~strikethrough~~: use `~~strikethrough~~`
-+ ++underline++
 
-Because different markdown interpreters handle underscores different it's best practice to **avoid using underscores** (_). Use asterisks (*) instead when writing markdown!
+Because different markdown interpreters handle underscores different it's best practice to **avoid using underscores** ( \_ ). Use asterisks ( \* ) instead when writing markdown!
+
+## Escaping special characters
+
+> In markdown any special characters are escaped by a leading backslash ( e.g. \\special-char ).
+
+|  character  |                                                       escaped                                                        | description         |
+| :---------: | :------------------------------------------------------------------------------------------------------------------: | :------------------ |
+|     \\      |                                                         `\\`                                                         | backslash           |
+| \`     | \` | backtick (escaping [backticks in code](#escape-backtick-code "Link: how to escape backtick in markdown code block")) |
+|     \>      |                                                         `\>`                                                         | greater than        |
+|     \*      |                                                         `\*`                                                         | asterisk            |
+|     \_      |                                                         `\_`                                                         | underscore          |
+|    \{ \}    |                                                        `\{\}`                                                        | curly braces        |
+|    \[ \]    |                                                        `\[\]`                                                        | square brackets     |
+|    \( \)    |                                                        `\(\)`                                                        | parentheses         |
+|     \#      |                                                         `\#`                                                         | hash mark           |
+|     \+      |                                                         `\+`                                                         | plus sign           |
+|     \-      |                                                         `\-`                                                         | minus sign (hyphen) |
+|     \.      |                                                         `\.`                                                         | dot                 |
+|     \!      |                                                         `\!`                                                         | exclamation mark    |
 
 ## Horizontal Rules
 
-To create a horizontal rule, use three or more asterisks (***), dashes (---), or underscores (___) on a line by themselves. The rendered output of all three looks identical.
+> To create a horizontal rule, use three or more asterisks ( \*\*\* ), dashes ( \-\-\- ), or underscores ( \_\_\_ ) on a line by themselves. The rendered output of all three looks identical.
+
+***markdown***
 
 ```markdown
 ***
@@ -96,22 +148,26 @@ To create a horizontal rule, use three or more asterisks (***), dashes (---), or
 _________________
 ```
 
+***result***
+
+***
+
 ## Links
 
 ```markdown
 [Link text](http://some.url.com "Link title")
 
-[Link text](#inner-text-link "Link title")
+[Link text](#link-id "Link title")
 
-[Link text<a name="#inner-text-anchor">](#inner-text-link "Link title")
+[Link text<a name="#link-id">](#link-id "Link title")
 ```
 
 + [Some test link](http://some.url.com "Link title")
 + [Inner text link](#MAIO-plugin "Inner text link to MAIO plugin")
 
-### Linking to Heading IDs
+### Linking to heading IDs
 
-You can link to headings with custom IDs in the file by creating a standard link with a number sign (#) followed by the custom heading ID.
+> You can link to headings with custom IDs in the file by creating a standard link with a number sign (#) followed by the custom heading ID.
 
 ```markdown
 [Heading IDs](#heading-ids)
@@ -171,13 +227,18 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 
 ## Table of contents (TOC)
 
-* using "Markdown All in One" plugin for VSCode:
-  + navigate to the place in your markdown file where you want to have your TOC created and set your cursor there
-  + press **Shift + Command + P** to open the VSCode command prompt
-  + type >**Create Table of Contents** => DONE
-  + TOC is automatically updated on file save by default
+### Create TOC manually 
 
-### Markdown plugins for Visual Studio Code
++ ...
+
+### Using VS Code plugin [Markdown All in One](MAIO-plugin)
+
++ navigate to the place in your markdown file where you want to have your TOC created and set your cursor there
++ press **Shift + Command + P** to open the VSCode command prompt
++ type >**Create Table of Contents** => DONE
++ TOC is automatically updated on file save by default
+
+## Markdown plugins for Visual Studio Code
 
 + <img src="https://yzhang.gallerycdn.vsassets.io/extensions/yzhang/markdown-all-in-one/3.4.0/1605323530575/Microsoft.VisualStudio.Services.Icons.Default" width="24px" height="24px" /> [Markdown All in One<a name="MAIO-plugin" />](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one "Get Markdown All in One plugin on Visual Studio Marketplace") (Visual Studio Marketplace)
 
@@ -210,18 +271,73 @@ Alternatively just use "old school" HTML syntax, where you can also set any requ
 
 ## Lists
 
-### Unordered lists
+> Lists are a way to structure data. They allow us to group sets of related items. Lists can be "nested" (you can have lists inside lists).
 
-To start an unordered list simple use one of the following characters:
+### Unordered lists<a name="unordered-lists">
 
-+ \* an asterisk starts an unordered list
-+ \* and this is another item in the list
-+ \+ alternatively use the \+ character to start an unordered list
-+ \- the \- character can also be used to start an unordered list
+> Unordered lists are lists whose elements are not related to each other (nor numerically neither alphanumerically). List items of unordered lists are marked as bullets (small black circles) by default.
+> 
+> To start an **unordered list** simply start a new line using one of the following three indicating characters: asterisk ( \* ), minus ( \- ) or plus ( \+ ) character. Those indicators can be mixed.
+
+**markdown**
+
+```markdown
+* an asterisk ( \* ) starts an unordered list
++ alternatively use the ( \+ ) character for an unordered list
+- the minus character ( \- ) can also be used for an unordered list
+```
+
+**result**
+
+* an asterisk ( \* ) starts an unordered list
+
++ alternatively use the ( \+ ) character for an unordered list
+
+- the minus character ( \- ) can also be used for an unordered list
+
+### Nested unordered lists
+
+> Unordered lists can be nested. The indicating characters can also be mixed when nested.
+
+**markdown**
+
+```markdown
+* Level 1, Item 1 using an asterisk ( \* )
+  * Level 2, Item 1 using an asterisk ( \* )
+    * Level 3, Item 1 using an asterisk ( \* )
+    + Level 3, Item 2 using the ( \+ ) character
+    - Level 3, Item 3 using the ( \- ) character
+  + Level 2, Item 2 using the ( \+ ) character
+  - Level 2, Item 3 using the ( \- ) character
++ Level 1, Item 2 using the ( \+ ) character
+- Level 1, Item 3 using the ( \- ) character
+```
+
+**result**
+
+* Level 1, Item 1 using an asterisk ( \* )
+
+  * Level 2, Item 1 using an asterisk ( \* )
+
+    * Level 3, Item 1 using an asterisk ( \* )
+
+    + Level 3, Item 2 using the ( \+ ) character
+
+    - Level 3, Item 3 using the ( \- ) character
+
+  + Level 2, Item 2 using the ( \+ ) character
+
+  - Level 2, Item 3 using the ( \- ) character
+
++ Level 1, Item 2 using the ( \+ ) character
+
+- Level 1, Item 3 using the ( \- ) character
 
 ### Ordered lists
 
-To start an ordered list, write this:
+> To start an ordered list, write this:
+
+**markdown**
 
 ```markdown
 1. this starts a list *with* numbers
@@ -233,9 +349,19 @@ To start an ordered list, write this:
     * here i'm back to the second level
 ```
 
+**result**
+
+1. this starts a list *with* numbers
+2.  this will show as number "2"
+3.  this will show as number "3."
+4. any number, +, -, or * will keep the list going.
+    * just indent by 4 spaces (or tab) to make a sub-list
+        1. just keep indenting for more sub lists
+    * here i'm back to the second level
+
 ### Checklists
 
-To start a check list, write this:
+> To start a check list, write this:
 
 **markdown**
 
@@ -249,62 +375,79 @@ To start a check list, write this:
 
 - [ ] this is not checked
 - [ ] this is not checked too
-- [x] but THIS is checked
+- [x] but ***THIS*** is checked
 
 ### Numbered Lists
 
-#### Manual counting
+#### Manually counted list items
 
 **markdown**
 
 ```markdown
-1. one
-2. two
-3. three
+1. Level 1, Item 1
+2. Level 1, Item 2
+3. Level 1, Item 3
 ```
 
 **result**
 
-1. one
-2. two
-3. three
+1. Level 1, Item 1
+2. Level 1, Item 2
+3. Level 1, Item 3
 
-#### Auto counting
+#### Auto counted list items
+
+> Start every new list item on a new line with indicator symbol "1." to auto increment the numbering.
 
 **markdown**
 
 ```markdown
-1. one
-1. two
-1. three
+1. Level 1, Item 1
+1. Level 1, Item 2
+1. Level 1, Item 3
 ```
 
 **result**
 
-1. one
-1. two
-1. three
+1. Level 1, Item 1
+1. Level 1, Item 2
+1. Level 1, Item 3
 
-##### Example: Terminating a Callout Using Two Empty Lines (auto count)
+#### Nested numbered list (auto count)
 
-1.  First list, item 1
-1.  First list, item 2
+> Nested list with auto counted list items.
 
+**markdown**
 
-1.  Second list, item 1
+```markdown
+1.  Level 1, Item 1
 
-##### List termination
+    1.  Level 2, Item 1
 
-###### List A
+            func emptyFunc() { }
 
-1.  Item 1, List A
-1.  Item 2, List A
+        ***
 
-###### List B
+    1.  Level 2, Item 2
 
-1.  Item 1, List B
+    1.  Level 2, Item 3
 
-### Nested list
+1.  Level 1, Item 2
+
+    1.  Level 2, Item 1
+
+        1.  Level 3, Item 1
+        1.  Level 3, Item 2
+        1.  Level 3, Item 3
+
+    1.  Level 2, Item 2
+
+    1.  Level 2, Item 3
+
+1.  Level 1, Item 3
+```
+
+**result**
 
 1.  Level 1, Item 1
 
@@ -316,9 +459,38 @@ To start a check list, write this:
 
     1.  Level 2, Item 2
 
+    1.  Level 2, Item 3
+
 1.  Level 1, Item 2
 
+    1.  Level 2, Item 1
+
+        1.  Level 3, Item 1
+        1.  Level 3, Item 2
+        1.  Level 3, Item 3
+
+    1.  Level 2, Item 2
+
+    1.  Level 2, Item 3
+
+1.  Level 1, Item 3
+
 ### Bullet list
+
+**markdown**
+
+```markdown
+- paragraph:
+
+  - with:
+
+    linebreak (1 line space between)
+
+  - and here:
+    without linebreak
+```
+
+**result**
 
 - paragraph:
 
@@ -331,7 +503,22 @@ To start a check list, write this:
 
 ### Resources list
 
+...
+
 ### Definition lists
+
+**markdown**
+
+```markdown
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+```
+
+**result**
 
 First Term
 : This is the definition of the first term.
@@ -342,21 +529,29 @@ Second Term
 
 ## Blockquotes
 
-To create a blockquote, add a > in front of a paragraph.
+To create a blockquote, add a ">" (greater than character) in front of a paragraph.
+
+**markdown**
 
 ```markdown
 > Dorothy followed her through many of the beautiful rooms in her castle.
 ```
 
+**result**
+
 > Dorothy followed her through many of the beautiful rooms in her castle.
 
 ### Blockquotes with multiple paragraphs
+
+**markdown**
 
 ```markdown
 > Dorothy followed her through many of the beautiful rooms in her castle.
 >
 > The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
 ```
+
+**result**
 
 > Dorothy followed her through many of the beautiful rooms in her castle.
 >
@@ -375,38 +570,6 @@ Blockquotes can be nested. Add a >> in front of the paragraph you want to nest.
 > Dorothy followed her through many of the beautiful rooms in her castle.
 >
 >> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-
-## Backslash escapes for special characters
-
-\\   backslash
-
-\`   backtick (escape backtick character in [code](#escape-backtick-code "Link: how to escape backtick in markdown code block"))
-
-\*   asterisk
-
-\_   underscore
-
-\{\}  curly braces
-
-\[\]  square brackets
-
-\(\)  parentheses
-
-\#   hash mark
-
-\+   plus sign
-
-\-   minus sign (hyphen)
-
-\.   dot
-
-\!   exclamation mark
-
-| character | code  | description                                                                                                                 |
-| :-------: | :---: | :-------------------------------------------------------------------------------------------------------------------------- |
-|    \\     | `\\`  | backslash                                                                                                                   |
-|    \`     |       | backtick (escape backtick character in [code](#escape-backtick-code "Link: how to escape backtick in markdown code block")) |
-|     7     |   8   | 9                                                                                                                           |
 
 ## CODE
 
