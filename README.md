@@ -121,10 +121,10 @@ Other websites can link to the heading by adding the custom heading ID to the fu
 Just enclose the "link part" of an [image link](#images) with another pair of square brackets
 
 ```markdown
-[![image-alt-text](./images/code-tag.png "Image of an html code tag")](#link-URL)
+[![image-alt-text](./images/code-tag.png "Link to CODE section")](#code)
 ```
 
-[![image-alt-text](./images/code-tag.png "Inner text link to the CODE section of this document")](#code)
+[![image-alt-text](./images/code-tag.png "Link to CODE section")](#code)
 
 ## Images
 
