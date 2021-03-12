@@ -1,5 +1,8 @@
 # Basic Markdown Syntax
 
+![Maintenance status](https://img.shields.io/badge/Maintained%3F-yes-brightgreen)
+[![MIT license](https://img.shields.io/badge/license-MIT-brightgreen)](https://opensource.org/licenses/MIT)
+
 > Overview over the most common and basic markdown commands and their syntax. Intended as a quick reference and showcase (cheatsheet).
 
 ## Table of Contents
